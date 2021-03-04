@@ -1,0 +1,49 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const discord_akairo_1 = require("discord-akairo");
+const discord_js_1 = require("discord.js");
+class AvatarCommand extends discord_akairo_1.Command {
+    constructor() {
+        super("avatar", {
+            aliases: ["av", "avatar"],
+            category: "Public",
+            description: {
+                content: "Get the avatar of a guild member",
+                usage: "avatar [ member ]",
+                examples: [
+                    "avatar",
+                    "avatar @Nemijah#6391",
+                    "avatar Nemijah"
+                ]
+            },
+            ratelimit: 3,
+            args: [
+                {
+                    id: "member",
+                    type: "member",
+                    match: "rest",
+                    default: (msg) => msg.member
+                },
+                {
+                    id: "size",
+                    type: (_, str) => {
+                        if (str && !isNaN(Number(str)) && [16, 32, 64, 128, 256, 512, 1024, 2048].includes(Number(str)))
+                            return Number(str);
+                        return null;
+                    },
+                    match: "option",
+                    flag: ["-size="],
+                    default: 2048
+                }
+            ]
+        });
+    }
+    exec(message, { member, size }) {
+        return message.util.send(new discord_js_1.MessageEmbed()
+            .setTitle(`Avatar | ${member.user.tag}`)
+            .setColor("RANDOM")
+            .setImage(member.user.displayAvatarURL({ dynamic: true, size: size })));
+    }
+}
+exports.default = AvatarCommand;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQXZhdGFyQ29tbWFuZC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jb21tYW5kcy9QdWJsaWMvQXZhdGFyQ29tbWFuZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLG1EQUF5QztBQUN6QywyQ0FBMkU7QUFFM0UsTUFBcUIsYUFBYyxTQUFRLHdCQUFPO0lBQzlDO1FBQ0ksS0FBSyxDQUFDLFFBQVEsRUFBRTtZQUNaLE9BQU8sRUFBRSxDQUFDLElBQUksRUFBRSxRQUFRLENBQUM7WUFDekIsUUFBUSxFQUFFLFFBQVE7WUFDbEIsV0FBVyxFQUFFO2dCQUNULE9BQU8sRUFBRSxrQ0FBa0M7Z0JBQzNDLEtBQUssRUFBRSxtQkFBbUI7Z0JBQzFCLFFBQVEsRUFBRTtvQkFDTixRQUFRO29CQUNSLHNCQUFzQjtvQkFDdEIsZ0JBQWdCO2lCQUNuQjthQUNKO1lBQ0QsU0FBUyxFQUFFLENBQUM7WUFDWixJQUFJLEVBQUU7Z0JBQ0Y7b0JBQ0ksRUFBRSxFQUFFLFFBQVE7b0JBQ1osSUFBSSxFQUFFLFFBQVE7b0JBQ2QsS0FBSyxFQUFFLE1BQU07b0JBQ2IsT0FBTyxFQUFFLENBQUMsR0FBWSxFQUFFLEVBQUUsQ0FBQyxHQUFHLENBQUMsTUFBTTtpQkFDeEM7Z0JBQ0Q7b0JBQ0ksRUFBRSxFQUFFLE1BQU07b0JBQ1YsSUFBSSxFQUFFLENBQUMsQ0FBVSxFQUFFLEdBQVcsRUFBaUIsRUFBRTt3QkFDN0MsSUFBRyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDLElBQUksQ0FBQyxFQUFFLEVBQUUsRUFBRSxFQUFFLEVBQUUsRUFBRSxHQUFHLEVBQUUsR0FBRyxFQUFFLEdBQUcsRUFBRSxJQUFJLEVBQUUsSUFBSSxDQUFDLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQzs0QkFBRSxPQUFPLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQzt3QkFDbkgsT0FBTyxJQUFJLENBQUM7b0JBQ2hCLENBQUM7b0JBQ0QsS0FBSyxFQUFFLFFBQVE7b0JBQ2YsSUFBSSxFQUFFLENBQUMsUUFBUSxDQUFDO29CQUNoQixPQUFPLEVBQUUsSUFBSTtpQkFDaEI7YUFDSjtTQUNKLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFTSxJQUFJLENBQUMsT0FBZ0IsRUFBRSxFQUFFLE1BQU0sRUFBRSxJQUFJLEVBQXdDO1FBQ2hGLE9BQU8sT0FBTyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsSUFBSSx5QkFBWSxFQUFFO2FBQ3RDLFFBQVEsQ0FBQyxZQUFZLE1BQU0sQ0FBQyxJQUFJLENBQUMsR0FBRyxFQUFFLENBQUM7YUFDdkMsUUFBUSxDQUFDLFFBQVEsQ0FBQzthQUNsQixRQUFRLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxFQUFFLE9BQU8sRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFFLElBQWlCLEVBQUUsQ0FBQyxDQUFDLENBQ3RGLENBQUM7SUFDTixDQUFDO0NBQ0o7QUEzQ0QsZ0NBMkNDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tbWFuZCB9IGZyb20gJ2Rpc2NvcmQtYWthaXJvJztcclxuaW1wb3J0IHsgTWVzc2FnZSwgR3VpbGRNZW1iZXIsIE1lc3NhZ2VFbWJlZCwgSW1hZ2VTaXplIH0gZnJvbSBcImRpc2NvcmQuanNcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEF2YXRhckNvbW1hbmQgZXh0ZW5kcyBDb21tYW5kIHtcclxuICAgIHB1YmxpYyBjb25zdHJ1Y3RvcigpIHtcclxuICAgICAgICBzdXBlcihcImF2YXRhclwiLCB7XHJcbiAgICAgICAgICAgIGFsaWFzZXM6IFtcImF2XCIsIFwiYXZhdGFyXCJdLFxyXG4gICAgICAgICAgICBjYXRlZ29yeTogXCJQdWJsaWNcIixcclxuICAgICAgICAgICAgZGVzY3JpcHRpb246IHtcclxuICAgICAgICAgICAgICAgIGNvbnRlbnQ6IFwiR2V0IHRoZSBhdmF0YXIgb2YgYSBndWlsZCBtZW1iZXJcIixcclxuICAgICAgICAgICAgICAgIHVzYWdlOiBcImF2YXRhciBbIG1lbWJlciBdXCIsXHJcbiAgICAgICAgICAgICAgICBleGFtcGxlczogW1xyXG4gICAgICAgICAgICAgICAgICAgIFwiYXZhdGFyXCIsXHJcbiAgICAgICAgICAgICAgICAgICAgXCJhdmF0YXIgQE5lbWlqYWgjNjM5MVwiLFxyXG4gICAgICAgICAgICAgICAgICAgIFwiYXZhdGFyIE5lbWlqYWhcIlxyXG4gICAgICAgICAgICAgICAgXVxyXG4gICAgICAgICAgICB9LFxyXG4gICAgICAgICAgICByYXRlbGltaXQ6IDMsXHJcbiAgICAgICAgICAgIGFyZ3M6IFtcclxuICAgICAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgICAgICBpZDogXCJtZW1iZXJcIixcclxuICAgICAgICAgICAgICAgICAgICB0eXBlOiBcIm1lbWJlclwiLFxyXG4gICAgICAgICAgICAgICAgICAgIG1hdGNoOiBcInJlc3RcIixcclxuICAgICAgICAgICAgICAgICAgICBkZWZhdWx0OiAobXNnOiBNZXNzYWdlKSA9PiBtc2cubWVtYmVyXHJcbiAgICAgICAgICAgICAgICB9LFxyXG4gICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgIGlkOiBcInNpemVcIixcclxuICAgICAgICAgICAgICAgICAgICB0eXBlOiAoXzogTWVzc2FnZSwgc3RyOiBzdHJpbmcpOiBudWxsIHwgTnVtYmVyID0+IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgaWYoc3RyICYmICFpc05hTihOdW1iZXIoc3RyKSkgJiYgWzE2LCAzMiwgNjQsIDEyOCwgMjU2LCA1MTIsIDEwMjQsIDIwNDhdLmluY2x1ZGVzKE51bWJlcihzdHIpKSkgcmV0dXJuIE51bWJlcihzdHIpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gbnVsbDtcclxuICAgICAgICAgICAgICAgICAgICB9LFxyXG4gICAgICAgICAgICAgICAgICAgIG1hdGNoOiBcIm9wdGlvblwiLFxyXG4gICAgICAgICAgICAgICAgICAgIGZsYWc6IFtcIi1zaXplPVwiXSxcclxuICAgICAgICAgICAgICAgICAgICBkZWZhdWx0OiAyMDQ4XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIF1cclxuICAgICAgICB9KTtcclxuICAgIH1cclxuXHJcbiAgICBwdWJsaWMgZXhlYyhtZXNzYWdlOiBNZXNzYWdlLCB7IG1lbWJlciwgc2l6ZX06IHsgbWVtYmVyOiBHdWlsZE1lbWJlciwgc2l6ZTogbnVtYmVyIH0pOiBQcm9taXNlPE1lc3NhZ2U+IHtcclxuICAgICAgICByZXR1cm4gbWVzc2FnZS51dGlsLnNlbmQobmV3IE1lc3NhZ2VFbWJlZCgpXHJcbiAgICAgICAgICAgIC5zZXRUaXRsZShgQXZhdGFyIHwgJHttZW1iZXIudXNlci50YWd9YClcclxuICAgICAgICAgICAgLnNldENvbG9yKFwiUkFORE9NXCIpXHJcbiAgICAgICAgICAgIC5zZXRJbWFnZShtZW1iZXIudXNlci5kaXNwbGF5QXZhdGFyVVJMKHsgZHluYW1pYzogdHJ1ZSwgc2l6ZTogc2l6ZSBhcyBJbWFnZVNpemUgfSkpXHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufSJdfQ==
