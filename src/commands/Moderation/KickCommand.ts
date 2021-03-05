@@ -1,50 +1,50 @@
-import { Command } from "discord-akairo";
-import { Message, MessageEmbed, GuildMember } from "discord.js";
-import { Bans } from "../../database/Models/Bans";
+import { Command } from 'discord-akairo';
+import { MessageEmbed, Message, GuildMember } from "discord.js";
 import { Repository } from 'typeorm';
+import  { Kicks } from "../../database/Models/Kicks";
 
-export default class BanCommand extends Command {
-    constructor() {
-        super("ban", {
-            aliases: ["ban"],
+export default class KickCommand extends  Command {
+    constructor(props) {
+        super("kick", {
+            aliases: ["boot", "kick"],
             category: "Moderation",
             description: {
-                content: "bans a member from the guild",
-                usage: "ban [member] [reason]",
+                content: "Kicks a member from the guild and saves it into the database..",
+                usage: "kick [ user ] [ reason ]",
                 examples: [
-                    "ban @Nemijah#6391 posing nsfw images",
-                    "ban Developer | Toby posting nsfw images"
+                    "kick Nemijah#6392 disrespectful towards staff",
+                    "kick Toby disrespectful towards staff"
                 ]
             },
+            userPermissions: ["KICK_MEMBERS"],
             ratelimit: 3,
-            userPermissions: ["BAN_MEMBERS"],
             args: [
                 {
                     id: "member",
                     type: "member",
                     prompt: {
-                        start: (msg: Message) => `${msg.author}, please provide a member to ban...`,
-                        retry: (msg: Message) => `${msg.author}, please provide a vaild member to ban...`
+                        start: (msg: Message) => `${msg.author}, please provide a member to kick`,
+                        retry: (msg: Message) => `${msg.author}, please provide a vaild member to warn...`
                     }
                 },
                 {
                     id: "reason",
                     type: "string",
                     match: "rest",
-                    default: "swearing"
+                    default: "disrespectful towards staff"
                 }
             ]
         });
     }
 
-    public async exec(message: Message, { member, reason}: { member: GuildMember, reason: string}): Promise<Message> {
-        const banRepo: Repository<Bans> = this.client.db.getRepository(Bans);
+    public async exec(message: Message, { member, reason }: { member: GuildMember, reason: string }): Promise<Message> {
+        const kickRepo: Repository<Kicks> = this.client.db.getRepository(Kicks);
 
         if(member.roles.highest.position >= message.member.roles.highest.position && message.author.id != message.guild.ownerID)
-            return message.channel.send(`${message.author.tag}. you're not allowed to ban ${member.user.tag}`);
+            return message.channel.send(`${message.author.tag}. you're not allowed to kick ${member.user.tag}`);
 
 
-        member.ban();
+        await member.kick();
 
         await message.channel.send(new MessageEmbed()
             .setTitle(message.guild.name)
@@ -55,11 +55,12 @@ export default class BanCommand extends Command {
                 { name: "Moderator id ", value: message.author.id, inline: false},
             )
             .setTimestamp()
-            .setFooter(member.user.displayAvatarURL({ dynamic: true}) + member.user.tag + " has been banned")
+            .setFooter(member.user.displayAvatarURL({ dynamic: true}) + member.user.tag + " has been kicked")
             .setThumbnail(message.guild.iconURL({ dynamic: true }))
         );
 
-        await banRepo.insert({
+
+        await kickRepo.insert({
             guild: message.guild.id,
             user: member.id,
             moderator: message.author.id,

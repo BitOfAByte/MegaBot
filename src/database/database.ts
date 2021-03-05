@@ -3,6 +3,7 @@ import  { Warns } from "./Models/Warns";
 import { Giveaways } from "./Models/Giveaways";
 import { Bans } from "./Models/Bans";
 import { dbName, dbPassword, dbUsername, host} from "../config";
+import { Kicks } from "./Models/Kicks";
 
 const connectionManager: ConnectionManager = new ConnectionManager()
 connectionManager.create({
@@ -12,7 +13,8 @@ connectionManager.create({
     entities: [
         Warns,
         Giveaways,
-        Bans
+        Bans,
+        Kicks
     ]
 });
 

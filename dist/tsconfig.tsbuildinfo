@@ -217,7 +217,7 @@
         "affectsGlobalScope": true
       },
       "../src/config.ts": {
-        "version": "e301baea6eae5deb97770331182c507bcc678565722a338233e014febb44c095",
+        "version": "53c72f64aba648aae73e5fa7f8a3dd2a8c29d7e7c7fa01159b54cca4cf210208",
         "signature": "d17e25dbc8db65a314280da35b97a4c217cfae5b9282a9454501b812faf350b6",
         "affectsGlobalScope": false
       },
@@ -1867,12 +1867,17 @@
         "affectsGlobalScope": false
       },
       "../src/database/models/bans.ts": {
-        "version": "1b62fd48a85eaf650c4d4903d183e9291097ac82047aae2e569e2e910f1b1cc3",
-        "signature": "603e7553b433827e076eb13869cd0112085f62aa7a29b87850611f9c2266dac6",
+        "version": "53bcd101c1331e6c8aff89183e9947127c7866cf01f1070ca52ec4fa26c52b86",
+        "signature": "238285ae04e12d98923476cfe68a052f02ab9c2d45adfa1fd655423c312f50d0",
+        "affectsGlobalScope": false
+      },
+      "../src/database/models/kicks.ts": {
+        "version": "22823d6193c23c042d8ec048c36f0c06d3f57aedbe464f50b01d16633dba4548",
+        "signature": "19aba8aee6776a3a3bc2edf149af761d62b7852a2f8f54f63532217d013acc4d",
         "affectsGlobalScope": false
       },
       "../src/database/database.ts": {
-        "version": "1e23f3e199253baa3995d685aa9bddd44c516ec4cee2244fc026d009460d6a5b",
+        "version": "d44add5a21d55ed7f43baa34d227815070985b8cefdc3785bf712988863be93d",
         "signature": "07d65131b1c2bb15626ecdfee67c70e63b249bda669cfa3e8c880854afe84bd3",
         "affectsGlobalScope": false
       },
@@ -1897,18 +1902,33 @@
         "affectsGlobalScope": false
       },
       "../src/commands/moderation/bancommand.ts": {
-        "version": "36b08db38366a8f422ee475ce5e98a7e21e894ca93c94d828ffffccbd99b1711",
+        "version": "ae2bed1cb888393e49edfd95a7a5de1cb1ab7a1434bafff691c52a3872eaa8f0",
+        "signature": "ae1ce39773265a23779a59a7138cd3e7c4cdf32df2f48a8e3adac84ef687f5c1",
+        "affectsGlobalScope": false
+      },
+      "../src/commands/moderation/kickcommand.ts": {
+        "version": "e8701683d2cc5cd3151f6e174efffd1b1617c5c232509dd5b2e641587e983d70",
+        "signature": "ca566c739ae7f44d281b94ca9fbdf43e56fa6a7e206a1be0864f5dc05c48186f",
+        "affectsGlobalScope": false
+      },
+      "../src/commands/moderation/mutecommand.ts": {
+        "version": "2e5fd13a3ed08fd59e7869a624bacae5654858e20a3f764f06867674ca826b01",
         "signature": "ae1ce39773265a23779a59a7138cd3e7c4cdf32df2f48a8e3adac84ef687f5c1",
         "affectsGlobalScope": false
       },
       "../src/commands/moderation/warncommand.ts": {
-        "version": "d4ac07feaa685890b73df02605c5b274df6840897727887da7b5d7b82fb4f90a",
+        "version": "fce3450e7121402012364d71ab46c755317f2586c6c4c1b1ec72160189ea6fbd",
         "signature": "19053bbe4a80bcdc37ba3e2b1278c51060ffe9bdda11d36a91da930fcad10df1",
         "affectsGlobalScope": false
       },
       "../src/commands/public/avatarcommand.ts": {
         "version": "286e02a911747a26774cdee5ce5e7ff8c3059e8484dc1eeadffa29a6ef8e3d6a",
         "signature": "0068ae6e29bd32d600c6e0ebc2dd0fd0cb420d57299d5bd92507ca3e732af110",
+        "affectsGlobalScope": false
+      },
+      "../src/commands/public/helpcommand.ts": {
+        "version": "c565ceda03c785665e5c46ce160e188b42b316e799bc4837ecf8e59597a630fe",
+        "signature": "fd084ace1e54970223bc9d10cd58e6ff734fd1d9cce86bd7da8656e599b1709c",
         "affectsGlobalScope": false
       },
       "../src/commands/public/pingcommand.ts": {
@@ -3676,6 +3696,16 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/database/models/bans.ts"
       ],
+      "../src/commands/moderation/kickcommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/database/models/kicks.ts"
+      ],
+      "../src/commands/moderation/mutecommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
       "../src/commands/moderation/warncommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
@@ -3683,6 +3713,10 @@
         "../src/database/models/warns.ts"
       ],
       "../src/commands/public/avatarcommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/commands/public/helpcommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
@@ -3695,12 +3729,16 @@
         "../src/config.ts",
         "../src/database/models/bans.ts",
         "../src/database/models/giveaways.ts",
+        "../src/database/models/kicks.ts",
         "../src/database/models/warns.ts"
       ],
       "../src/database/models/bans.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
       "../src/database/models/giveaways.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/database/models/kicks.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
       "../src/database/models/warns.ts": [
@@ -5205,11 +5243,23 @@
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
+      "../src/commands/moderation/kickcommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/commands/moderation/mutecommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
       "../src/commands/moderation/warncommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
       "../src/commands/public/avatarcommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/commands/public/helpcommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
@@ -5651,13 +5701,17 @@
       "../src/client/botclient.ts",
       "../src/commands/admin/giveawaycommand.ts",
       "../src/commands/moderation/bancommand.ts",
+      "../src/commands/moderation/kickcommand.ts",
+      "../src/commands/moderation/mutecommand.ts",
       "../src/commands/moderation/warncommand.ts",
       "../src/commands/public/avatarcommand.ts",
+      "../src/commands/public/helpcommand.ts",
       "../src/commands/public/pingcommand.ts",
       "../src/config.ts",
       "../src/database/database.ts",
       "../src/database/models/bans.ts",
       "../src/database/models/giveaways.ts",
+      "../src/database/models/kicks.ts",
       "../src/database/models/warns.ts",
       "../src/listeners/client/ready.ts",
       "../src/structures/giveaways/giveaways.ts"

@@ -39,8 +39,8 @@ export default class WarnCommand extends Command {
     public async exec(message: Message, { member, reason}: { member: GuildMember, reason: string}): Promise<Message> {
         const warnRepo: Repository<Warns> = this.client.db.getRepository(Warns);
 
-        if(member.roles.highest.position >= message.member.roles.highest.position && message.author.id !== message.guild.ownerID)
-            return message.util.reply("this member has higher or equal role to you!");
+        if(member.roles.highest.position >= message.member.roles.highest.position && message.author.id != message.guild.ownerID)
+            return message.channel.send(`${message.author.tag}. you're not allowed to warn ${member.user.tag}`);
 
         await warnRepo.insert({
             guild: message.guild.id,

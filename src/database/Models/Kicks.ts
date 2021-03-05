@@ -1,8 +1,8 @@
 import  { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("bans")
+@Entity("kicks")
 
-export class Bans {
+export class Kicks {
 
     @PrimaryGeneratedColumn()
     id!: number;
@@ -19,5 +19,4 @@ export class Bans {
 
     @Column({ type: "varchar", length: 22 })
     reason!: string;
-
 }
