@@ -1,14 +1,14 @@
 import  { Command } from "discord-akairo";
-import { Giveaways } from "../../database/Models/Giveaways";
+import { Giveaways } from "../../database/TypeOrm/Models/Giveaways";
 import  { Repository } from 'typeorm';
 import { MessageEmbed, Message, MessageReaction, User } from "discord.js";
 
 export default {
     async end(giveawayRepo: Repository<Giveaways>, msg: Message) {
         await msg.fetch();
-        await giveawayRepo.delete({ message: msg.id });
+        await giveawayRepo.delete({message: msg.id});
 
-        const reaction:  MessageReaction = await msg.reactions.cache.filter(r => r.emoji.name === "🥳").first().fetch();
+        const reaction: MessageReaction = await msg.reactions.cache.filter(r => r.emoji.name === "🥳").first().fetch();
         await reaction.users.fetch();
         const winner: User = reaction.users.cache.filter(w => !w.bot).random();
 

@@ -1,7 +1,7 @@
 import { Command } from "discord-akairo";
 import { Message, MessageEmbed, GuildMember } from "discord.js";
-import { Bans } from "../../database/Models/Bans";
-import { Repository } from 'typeorm';
+import {where} from "sequelize";
+const banConfig = require('../../database/MySQL/Models/BanConfig');
 
 export default class BanCommand extends Command {
     constructor() {
@@ -38,8 +38,6 @@ export default class BanCommand extends Command {
     }
 
     public async exec(message: Message, { member, reason}: { member: GuildMember, reason: string}): Promise<Message> {
-        const banRepo: Repository<Bans> = this.client.db.getRepository(Bans);
-
         if(member.roles.highest.position >= message.member.roles.highest.position && message.author.id != message.guild.ownerID)
             return message.channel.send(`${message.author.tag}. you're not allowed to ban ${member.user.tag}`);
 
@@ -59,11 +57,13 @@ export default class BanCommand extends Command {
             .setThumbnail(message.guild.iconURL({ dynamic: true }))
         );
 
-        await banRepo.insert({
-            guild: message.guild.id,
-            user: member.id,
-            moderator: message.author.id,
-            reason: reason
+        await banConfig.create({
+            user: member.user.tag,
+            userId: member.id,
+            reason: reason,
+            moderator: message.author.tag,
+            moderatorId: message.author.id,
+            active: true,
         });
     }
 }

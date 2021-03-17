@@ -1,9 +1,7 @@
 import { ConnectionManager } from 'typeorm';
-import  { Warns } from "./Models/Warns";
 import { Giveaways } from "./Models/Giveaways";
-import { Bans } from "./Models/Bans";
-import { dbName, dbPassword, dbUsername, host} from "../config";
-import { Kicks } from "./Models/Kicks";
+import { dbName } from "../../config";
+
 
 const connectionManager: ConnectionManager = new ConnectionManager()
 connectionManager.create({
@@ -11,11 +9,9 @@ connectionManager.create({
     type: 'sqlite',
     database: "./db.sqlite",
     entities: [
-        Warns,
-        Giveaways,
-        Bans,
-        Kicks
+        Giveaways
     ]
 });
 
+console.log("Connected to the sqlite database...");
 export default  connectionManager;

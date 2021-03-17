@@ -3,7 +3,7 @@ import { Message, MessageEmbed } from "discord.js";
 import ms from 'ms';
 
 import { Repository } from 'typeorm';
-import { Giveaways} from "../../database/Models/Giveaways";
+import { Giveaways} from "../../database/TypeOrm/Models/Giveaways"
 
 import giveaways from "../../structures/giveaways/giveaways";
 
@@ -55,7 +55,7 @@ export default class GiveawayCommand extends Command {
             .setFooter("Giveaway ends")
             .setTimestamp(end)
         );
-       await msg.react("🥳");
+        await msg.react("🥳");
 
         await giveawayRepo.insert({
             channel: msg.channel.id,

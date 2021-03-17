@@ -1856,33 +1856,18 @@
         "signature": "1f956ff5e76bced84fffad27c121cfe12ecca23de8081c9ab9377ead7167a57d",
         "affectsGlobalScope": false
       },
-      "../src/database/models/warns.ts": {
-        "version": "96d6c7699db84cd1b32dee867cb5b918e2a9ee5c87df4e13c325f3fab0766392",
-        "signature": "caf983952a3e2e7b2bde82470b46efde9734a45d5bc4724605b829306ea1a0ca",
-        "affectsGlobalScope": false
-      },
-      "../src/database/models/giveaways.ts": {
+      "../src/database/typeorm/models/giveaways.ts": {
         "version": "bae75830b1ae9cda62865a08bd0fa3bc09f0636c4e21ec1e9c2f0cb77c2d78ec",
         "signature": "8bfdc93d913882bcec51f23fdba2f7fb2a994fb004b15ff9f123ea1f60d5a525",
         "affectsGlobalScope": false
       },
-      "../src/database/models/bans.ts": {
-        "version": "53bcd101c1331e6c8aff89183e9947127c7866cf01f1070ca52ec4fa26c52b86",
-        "signature": "238285ae04e12d98923476cfe68a052f02ab9c2d45adfa1fd655423c312f50d0",
-        "affectsGlobalScope": false
-      },
-      "../src/database/models/kicks.ts": {
-        "version": "22823d6193c23c042d8ec048c36f0c06d3f57aedbe464f50b01d16633dba4548",
-        "signature": "19aba8aee6776a3a3bc2edf149af761d62b7852a2f8f54f63532217d013acc4d",
-        "affectsGlobalScope": false
-      },
-      "../src/database/database.ts": {
-        "version": "d44add5a21d55ed7f43baa34d227815070985b8cefdc3785bf712988863be93d",
+      "../src/database/typeorm/typeorm.ts": {
+        "version": "6d5ab1afd0f24f201df67ac5b5c9d300c0a1d14f462bbd5cae8d38e333ed22f3",
         "signature": "07d65131b1c2bb15626ecdfee67c70e63b249bda669cfa3e8c880854afe84bd3",
         "affectsGlobalScope": false
       },
       "../src/client/botclient.ts": {
-        "version": "564cec85f107825f9ad0625d0744198523525976ecdfcd91660b7e5eae6d5c48",
+        "version": "aa42d52f24e766e3c601b1d3dc7da79636f39b5c1c8aab58fc6ab17578cf8d5c",
         "signature": "ef49654f55df5c716325dc6a09216ef4d9673e1f5a8da3c7767f2390b2dd3f30",
         "affectsGlobalScope": false
       },
@@ -1891,23 +1876,153 @@
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
+      "../src/commands/admin/addrolecommand.ts": {
+        "version": "45ae1db84d0be59e6d3ea41d70b213944a4c5199e45a852ca3139b190926dbf2",
+        "signature": "0a6c1a8f5e5fb93b03fbf4a945b2fae955a235c1b8c95373d60ca5adf49384e5",
+        "affectsGlobalScope": false
+      },
       "../src/structures/giveaways/giveaways.ts": {
-        "version": "9d0c3ec8e1f58cb2e6f660a61ecf6c6f1e445d573233a6a9a466180b091101a5",
-        "signature": "5b6fe3559638ac8b30fa157dd000562403dfd4f41aff23ec60dc4c358c6fdb1c",
+        "version": "ffb3ca2455bd07bb2177e8d9677c789c12712bde7542f2a6410ac447eea8eb49",
+        "signature": "27d5b35572f36ed089a025a136c780784a64fb637f80ee19733c65273068a874",
         "affectsGlobalScope": false
       },
       "../src/commands/admin/giveawaycommand.ts": {
-        "version": "870fd7ad0c0b35b1eb39e947dd731ea61d26a9e62138e359d61b295e0dbc6554",
+        "version": "51b4e119a3f079eedc4c660cfe51df7f214377d7fa9e9d44826ed87527144f61",
         "signature": "d8bedf0da67447c72c7390a946570f8056bab9cfac7838cecb95d2476b8f6b02",
         "affectsGlobalScope": false
       },
+      "../node_modules/sequelize/types/lib/data-types.d.ts": {
+        "version": "90f0eb36d6cca7e856726c478d061c40c869d184012e2912098269ffc904417f",
+        "signature": "90f0eb36d6cca7e856726c478d061c40c869d184012e2912098269ffc904417f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/deferrable.d.ts": {
+        "version": "c0f575e9f7005738c3470854fa23817120457d870b1a58eadb3b3212d38aaa80",
+        "signature": "c0f575e9f7005738c3470854fa23817120457d870b1a58eadb3b3212d38aaa80",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/operators.d.ts": {
+        "version": "f64a696104d96d1bbf022949dd6276504ea98b1dd470ec12eddf9042e7e93855",
+        "signature": "f64a696104d96d1bbf022949dd6276504ea98b1dd470ec12eddf9042e7e93855",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/query-types.d.ts": {
+        "version": "0c098f6d249616469e6d9e2c584145c8e9299297b472d77ca348d293fe3ffd80",
+        "signature": "0c098f6d249616469e6d9e2c584145c8e9299297b472d77ca348d293fe3ffd80",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/table-hints.d.ts": {
+        "version": "fd7d0017b5f33a8a58e07d0c15a93387250ae1d627170ecec68f0a93960cc02b",
+        "signature": "fd7d0017b5f33a8a58e07d0c15a93387250ae1d627170ecec68f0a93960cc02b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/index-hints.d.ts": {
+        "version": "334236475f89849f4373639c9053809ec3ee48f20f859f96e3cd3f0eff770921",
+        "signature": "334236475f89849f4373639c9053809ec3ee48f20f859f96e3cd3f0eff770921",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/associations/base.d.ts": {
+        "version": "63751196a413d53618aa3819ee39c957a4bd0c8b0b0cadf5201ae85c8c02ded3",
+        "signature": "63751196a413d53618aa3819ee39c957a4bd0c8b0b0cadf5201ae85c8c02ded3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/associations/belongs-to.d.ts": {
+        "version": "9d00ccc37aa1dc7da29e5e2009c33db6177e3551f481be4687e512d5916a4664",
+        "signature": "9d00ccc37aa1dc7da29e5e2009c33db6177e3551f481be4687e512d5916a4664",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/associations/has-one.d.ts": {
+        "version": "9cd5e6b023e25421d14e8f0fde49b258f0db5e89c48cc71d0524ff1a06d5da39",
+        "signature": "9cd5e6b023e25421d14e8f0fde49b258f0db5e89c48cc71d0524ff1a06d5da39",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/associations/has-many.d.ts": {
+        "version": "fee714d79d176aa62bdc016aa0bcf00c6d1a6d1f0a3933076def39d3031b1c5a",
+        "signature": "fee714d79d176aa62bdc016aa0bcf00c6d1a6d1f0a3933076def39d3031b1c5a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/associations/belongs-to-many.d.ts": {
+        "version": "96b5683ddbaeee3afd722c265b1d8388b8d3ed65e32c0efc3607695086562b90",
+        "signature": "96b5683ddbaeee3afd722c265b1d8388b8d3ed65e32c0efc3607695086562b90",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/associations/index.d.ts": {
+        "version": "47d01ed73d26a694589ea1e020f8edf31cb0640d82096203672bb603d82e7166",
+        "signature": "47d01ed73d26a694589ea1e020f8edf31cb0640d82096203672bb603d82e7166",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/instance-validator.d.ts": {
+        "version": "2501f0aaf3650774a9f7bf18340d2a04cbdc013c4ebac4572666c214411c4196",
+        "signature": "2501f0aaf3650774a9f7bf18340d2a04cbdc013c4ebac4572666c214411c4196",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/model-manager.d.ts": {
+        "version": "6b41e2c79936d58d2cc9749264df7e9f5e93866d450a89cb5d880ca4c9ff9e5e",
+        "signature": "6b41e2c79936d58d2cc9749264df7e9f5e93866d450a89cb5d880ca4c9ff9e5e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/transaction.d.ts": {
+        "version": "d7ecf0a9c702347d1994dea6d682df8695b9c0c43d3b37ce06208ec50ed3fb5f",
+        "signature": "d7ecf0a9c702347d1994dea6d682df8695b9c0c43d3b37ce06208ec50ed3fb5f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/type-helpers/set-required.d.ts": {
+        "version": "4b2007ffacc248d92dcee289b18043050de29f979cd1e11c9fef97c0a8ea287d",
+        "signature": "4b2007ffacc248d92dcee289b18043050de29f979cd1e11c9fef97c0a8ea287d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/query-interface.d.ts": {
+        "version": "c4699a41413a80fc3b5a84dc3a07f1415180cfe4eea6a5e92dc8993bce9cf6f9",
+        "signature": "c4699a41413a80fc3b5a84dc3a07f1415180cfe4eea6a5e92dc8993bce9cf6f9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/connection-manager.d.ts": {
+        "version": "c5c489ade4246228fe543cb09ae9b834b7e415f4e6497e03c5bdbfa338a00bd5",
+        "signature": "c5c489ade4246228fe543cb09ae9b834b7e415f4e6497e03c5bdbfa338a00bd5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/sequelize.d.ts": {
+        "version": "482b5e1c8de757eaf759b83caaaed019a785a3f7a7fdee03f3edbae4db1fedca",
+        "signature": "482b5e1c8de757eaf759b83caaaed019a785a3f7a7fdee03f3edbae4db1fedca",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/hooks.d.ts": {
+        "version": "75c4007b453ce04b45de5b07034aa12ca78c270efe20e5ab1a7ade5183e6fefc",
+        "signature": "75c4007b453ce04b45de5b07034aa12ca78c270efe20e5ab1a7ade5183e6fefc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/model.d.ts": {
+        "version": "ac818561c5fc6311095db8d5efbd2c000725bded3b2c4cdf14b738bf76dd326d",
+        "signature": "ac818561c5fc6311095db8d5efbd2c000725bded3b2c4cdf14b738bf76dd326d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/utils.d.ts": {
+        "version": "abc08bf57b4cc17510dd3b32675700574892a7611fc19227a1f00974a43bc7ee",
+        "signature": "abc08bf57b4cc17510dd3b32675700574892a7611fc19227a1f00974a43bc7ee",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/errors.d.ts": {
+        "version": "9c5062d7febf5228522af9f2d44d2e16f1f5e40c596f732e9a5fb0b4ff1e182b",
+        "signature": "9c5062d7febf5228522af9f2d44d2e16f1f5e40c596f732e9a5fb0b4ff1e182b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/lib/utils/validator-extras.d.ts": {
+        "version": "3b9e650cf228a1d63f90e018be93b4e77e2250c563006559a77a617a3d5bae2e",
+        "signature": "3b9e650cf228a1d63f90e018be93b4e77e2250c563006559a77a617a3d5bae2e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sequelize/types/index.d.ts": {
+        "version": "d24299347fbdeb89097ebaa5acd9ead460c6a9228778fdb50cfdf4f592af4258",
+        "signature": "d24299347fbdeb89097ebaa5acd9ead460c6a9228778fdb50cfdf4f592af4258",
+        "affectsGlobalScope": false
+      },
       "../src/commands/moderation/bancommand.ts": {
-        "version": "ae2bed1cb888393e49edfd95a7a5de1cb1ab7a1434bafff691c52a3872eaa8f0",
+        "version": "356a7b7cdd1dd0924068ccc72a200e1b4f4b3f7c51d2e9260e1b7119bcf34df3",
         "signature": "ae1ce39773265a23779a59a7138cd3e7c4cdf32df2f48a8e3adac84ef687f5c1",
         "affectsGlobalScope": false
       },
       "../src/commands/moderation/kickcommand.ts": {
-        "version": "e8701683d2cc5cd3151f6e174efffd1b1617c5c232509dd5b2e641587e983d70",
+        "version": "21297f53f22b3454d7606cff64e64aa8c379584690a1566c4e1e3351e06a0b60",
         "signature": "ca566c739ae7f44d281b94ca9fbdf43e56fa6a7e206a1be0864f5dc05c48186f",
         "affectsGlobalScope": false
       },
@@ -1916,8 +2031,13 @@
         "signature": "ae1ce39773265a23779a59a7138cd3e7c4cdf32df2f48a8e3adac84ef687f5c1",
         "affectsGlobalScope": false
       },
+      "../src/commands/moderation/tempbancommand.ts": {
+        "version": "84f569338d40c8dad13cc7a6468e7bcce04b76cd23e9a4d1d07a7a5b1960bf15",
+        "signature": "0d85a7da085a23d51616daca70526d00e53e1a1d61992a274e0deca9731ae285",
+        "affectsGlobalScope": false
+      },
       "../src/commands/moderation/warncommand.ts": {
-        "version": "fce3450e7121402012364d71ab46c755317f2586c6c4c1b1ec72160189ea6fbd",
+        "version": "b4dca952be7461c6d7b09d51f0f9ed71896afbc9982252a5a7f32c896c2a4201",
         "signature": "19053bbe4a80bcdc37ba3e2b1278c51060ffe9bdda11d36a91da930fcad10df1",
         "affectsGlobalScope": false
       },
@@ -1926,9 +2046,19 @@
         "signature": "0068ae6e29bd32d600c6e0ebc2dd0fd0cb420d57299d5bd92507ca3e732af110",
         "affectsGlobalScope": false
       },
+      "../src/commands/public/djscommand.ts": {
+        "version": "826b52891c0d9cdf69662ce13511c1c0c7000dc108cfded1f289e1e0ac6d08bb",
+        "signature": "3cfbb9c2b98c1f7b9894f475be2a3faefd0fa46578b005d94fb1299a605ab88c",
+        "affectsGlobalScope": false
+      },
       "../src/commands/public/helpcommand.ts": {
         "version": "c565ceda03c785665e5c46ce160e188b42b316e799bc4837ecf8e59597a630fe",
         "signature": "fd084ace1e54970223bc9d10cd58e6ff734fd1d9cce86bd7da8656e599b1709c",
+        "affectsGlobalScope": false
+      },
+      "../src/commands/public/levelcommand.ts": {
+        "version": "50216fcf10e6da2a4f2ec3124e990038918743076335cf81cd5961385b16f62d",
+        "signature": "4f8cb9c2a5ad3c523cd75a4d4c26947b630ef0233e5f264d351b043a65ab41cb",
         "affectsGlobalScope": false
       },
       "../src/commands/public/pingcommand.ts": {
@@ -1936,9 +2066,9 @@
         "signature": "642797e7218ff3889c4afb4dcc949b8cbc3faf367ffb31b79036f6f94d171e80",
         "affectsGlobalScope": false
       },
-      "../src/listeners/client/ready.ts": {
-        "version": "e61b3febea4b994f3098c4c2e0a0ea8e393a25856576b0be23736b9505df218e",
-        "signature": "9b6c0f9febeb353e1ec4caea3c53b010bb147f50211267ac9f50912294fdf2fd",
+      "../src/commands/public/userinfo.ts": {
+        "version": "df4b8d8d519aa19c378e3d4c72391f3917b581220970f2dc7e75ac534d9fe0a2",
+        "signature": "7844e3f815e2965a2bb03791f96358ce6a5c1671c6831eebe100dc1fc469c221",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -2175,6 +2305,66 @@
         "version": "9c4c395e927045b324877acdc4bfb95f128f36bc9f073266a2f0342495075a4f",
         "signature": "9c4c395e927045b324877acdc4bfb95f128f36bc9f073266a2f0342495075a4f",
         "affectsGlobalScope": false
+      },
+      "../node_modules/@types/bson/index.d.ts": {
+        "version": "2d23edce1d4a3b33280970484e17ca87b03e2829d8677ae1501de18269f0498f",
+        "signature": "2d23edce1d4a3b33280970484e17ca87b03e2829d8677ae1501de18269f0498f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/mongodb/index.d.ts": {
+        "version": "cdcaff91efe06dc77ea5e8b3672fd6ae722c91ad4bf804ea4f5017714abf7084",
+        "signature": "cdcaff91efe06dc77ea5e8b3672fd6ae722c91ad4bf804ea4f5017714abf7084",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/mongoose/index.d.ts": {
+        "version": "cb707471dd6b1b1c93fed0dfe882cb82ec1dd368c9ba13277b8afed3e6283421",
+        "signature": "cb707471dd6b1b1c93fed0dfe882cb82ec1dd368c9ba13277b8afed3e6283421",
+        "affectsGlobalScope": false
+      },
+      "../src/database/mongodb/database.ts": {
+        "version": "1edc4b74ca64a1105995de641867ade063226dfb7d51058e22d9e5af34f31e12",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
+        "affectsGlobalScope": false
+      },
+      "../src/database/mongodb/models/giveaway.ts": {
+        "version": "6b6900ea1b9b1f72f93e360f225638deb9273365c859ec1195889da18cde9ce4",
+        "signature": "6740c648302322bade3d025e036802b7786eb35af5c94045b3d6d2b8ecd316c9",
+        "affectsGlobalScope": true
+      },
+      "../src/database/mongodb/models/warns.ts": {
+        "version": "196a05de8673983b501f98d0dd57bf95fa86edb97e621e4558480291c645d805",
+        "signature": "cab32eb0c526195926df06abc8e845b607dc5fc29b8c66ffe6b5c1378f1b8b3e",
+        "affectsGlobalScope": true
+      },
+      "../src/database/mysql/sql.ts": {
+        "version": "eb393c54a0dc667234684931c093ef39c6d58ffc2f127e71cf0f0607ca30a7b6",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
+        "affectsGlobalScope": false
+      },
+      "../src/database/mysql/models/banconfig.ts": {
+        "version": "d89602109839a293fa7b35eb2b9c538594a1ec411eee6d1c32d47ccb91851379",
+        "signature": "3b797a969d91bcf80c35f58cd707b85867fe173bbac19d2b8d120cc50ec770fa",
+        "affectsGlobalScope": true
+      },
+      "../src/database/mysql/models/warnconfig.ts": {
+        "version": "23828489d19e2bb57c956c1bcd6357f682b9f0122ee64bba0728bea17ac6c3df",
+        "signature": "6269eff0ed4fa49b96a7410a50deb89b0aa5506ec303400c2c1d1f5282df65b6",
+        "affectsGlobalScope": true
+      },
+      "../src/listeners/client/message.ts": {
+        "version": "2c2c4690411efee9f1b311fe987874f2d61ef2eed175fb76ea5f24df5b2bee00",
+        "signature": "f20b5ae69a1dce1636ae6c309912cb9e57d1928496f457e50d947651aa46ee83",
+        "affectsGlobalScope": false
+      },
+      "../src/listeners/client/messagedelete.ts": {
+        "version": "e2e23a4e2e8177a9845786153da48d020891e3a31916c0db84b61390dde338c3",
+        "signature": "dba0c9104e451b3e648aa98e9feb5489b5b809b746da7eaf9b754068489febd0",
+        "affectsGlobalScope": false
+      },
+      "../src/listeners/client/ready.ts": {
+        "version": "dd5638f24ed7ed1b53d6c54791bbb672d726ed62e5ad307393ce70eae31937ab",
+        "signature": "9b6c0f9febeb353e1ec4caea3c53b010bb147f50211267ac9f50912294fdf2fd",
+        "affectsGlobalScope": false
       }
     },
     "options": {
@@ -2199,6 +2389,16 @@
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
+      "../node_modules/@types/bson/index.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@types/mongodb/index.d.ts": [
+        "../node_modules/@types/bson/index.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts"
+      ],
       "../node_modules/@types/node/assert.d.ts": [
         "../node_modules/@types/node/assert.d.ts"
       ],
@@ -2441,6 +2641,112 @@
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/mongoose/index.d.ts": [
+        "../node_modules/@types/mongodb/index.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../node_modules/sequelize/types/index.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/index.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/deferrable.d.ts",
+        "../node_modules/sequelize/types/lib/errors.d.ts",
+        "../node_modules/sequelize/types/lib/index-hints.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/operators.d.ts",
+        "../node_modules/sequelize/types/lib/query-interface.d.ts",
+        "../node_modules/sequelize/types/lib/query-types.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts",
+        "../node_modules/sequelize/types/lib/table-hints.d.ts",
+        "../node_modules/sequelize/types/lib/transaction.d.ts",
+        "../node_modules/sequelize/types/lib/utils.d.ts",
+        "../node_modules/sequelize/types/lib/utils/validator-extras.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/base.d.ts": [
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/belongs-to-many.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/belongs-to.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/has-many.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/has-one.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/index.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/associations/belongs-to-many.d.ts",
+        "../node_modules/sequelize/types/lib/associations/belongs-to.d.ts",
+        "../node_modules/sequelize/types/lib/associations/has-many.d.ts",
+        "../node_modules/sequelize/types/lib/associations/has-one.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/hooks.d.ts": [
+        "../node_modules/sequelize/types/lib/instance-validator.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/instance-validator.d.ts": [
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/model-manager.d.ts": [
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/model.d.ts": [
+        "../node_modules/sequelize/types/index.d.ts",
+        "../node_modules/sequelize/types/lib/associations/index.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/deferrable.d.ts",
+        "../node_modules/sequelize/types/lib/hooks.d.ts",
+        "../node_modules/sequelize/types/lib/instance-validator.d.ts",
+        "../node_modules/sequelize/types/lib/operators.d.ts",
+        "../node_modules/sequelize/types/lib/query-interface.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts",
+        "../node_modules/sequelize/types/lib/transaction.d.ts",
+        "../node_modules/sequelize/types/lib/utils.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/query-interface.d.ts": [
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/query-types.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts",
+        "../node_modules/sequelize/types/lib/transaction.d.ts",
+        "../node_modules/sequelize/types/lib/utils.d.ts",
+        "../node_modules/sequelize/types/type-helpers/set-required.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/sequelize.d.ts": [
+        "../node_modules/sequelize/types/lib/connection-manager.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/hooks.d.ts",
+        "../node_modules/sequelize/types/lib/instance-validator.d.ts",
+        "../node_modules/sequelize/types/lib/model-manager.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/query-interface.d.ts",
+        "../node_modules/sequelize/types/lib/query-types.d.ts",
+        "../node_modules/sequelize/types/lib/transaction.d.ts",
+        "../node_modules/sequelize/types/lib/utils.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/transaction.d.ts": [
+        "../node_modules/sequelize/types/lib/deferrable.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/utils.d.ts": [
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
       ],
       "../node_modules/typeorm/cache/queryresultcache.d.ts": [
         "../node_modules/typeorm/cache/queryresultcacheoptions.d.ts",
@@ -3681,38 +3987,45 @@
         "../node_modules/discord.js/typings/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/config.ts",
-        "../src/database/database.ts"
+        "../src/database/typeorm/typeorm.ts"
+      ],
+      "../src/commands/admin/addrolecommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
       ],
       "../src/commands/admin/giveawaycommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/database/models/giveaways.ts",
+        "../src/database/typeorm/models/giveaways.ts",
         "../src/structures/giveaways/giveaways.ts"
       ],
       "../src/commands/moderation/bancommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../src/database/models/bans.ts"
+        "../node_modules/sequelize/types/index.d.ts"
       ],
       "../src/commands/moderation/kickcommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../src/database/models/kicks.ts"
+        "../node_modules/discord.js/typings/index.d.ts"
       ],
       "../src/commands/moderation/mutecommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
+      "../src/commands/moderation/tempbancommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
       "../src/commands/moderation/warncommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../src/database/models/warns.ts"
+        "../node_modules/discord.js/typings/index.d.ts"
       ],
       "../src/commands/public/avatarcommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/commands/public/djscommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
@@ -3720,45 +4033,66 @@
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
+      "../src/commands/public/levelcommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
       "../src/commands/public/pingcommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
-      "../src/database/database.ts": [
+      "../src/commands/public/userinfo.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/database/mongodb/database.ts": [
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../src/database/mysql/sql.ts": [
+        "../node_modules/sequelize/types/index.d.ts",
+        "../src/config.ts"
+      ],
+      "../src/database/typeorm/models/giveaways.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/database/typeorm/typeorm.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/config.ts",
-        "../src/database/models/bans.ts",
-        "../src/database/models/giveaways.ts",
-        "../src/database/models/kicks.ts",
-        "../src/database/models/warns.ts"
+        "../src/database/typeorm/models/giveaways.ts"
       ],
-      "../src/database/models/bans.ts": [
-        "../node_modules/typeorm/index.d.ts"
+      "../src/listeners/client/message.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
       ],
-      "../src/database/models/giveaways.ts": [
-        "../node_modules/typeorm/index.d.ts"
-      ],
-      "../src/database/models/kicks.ts": [
-        "../node_modules/typeorm/index.d.ts"
-      ],
-      "../src/database/models/warns.ts": [
-        "../node_modules/typeorm/index.d.ts"
+      "../src/listeners/client/messagedelete.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
       ],
       "../src/listeners/client/ready.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/database/models/giveaways.ts",
+        "../src/database/typeorm/models/giveaways.ts",
         "../src/structures/giveaways/giveaways.ts"
       ],
       "../src/structures/giveaways/giveaways.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/database/models/giveaways.ts"
+        "../src/database/typeorm/models/giveaways.ts"
       ]
     },
     "exportedModulesMap": {
+      "../node_modules/@types/bson/index.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@types/mongodb/index.d.ts": [
+        "../node_modules/@types/bson/index.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts"
+      ],
       "../node_modules/@types/node/assert.d.ts": [
         "../node_modules/@types/node/assert.d.ts"
       ],
@@ -4001,6 +4335,112 @@
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/mongoose/index.d.ts": [
+        "../node_modules/@types/mongodb/index.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/mongoose/index.d.ts"
+      ],
+      "../node_modules/sequelize/types/index.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/index.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/deferrable.d.ts",
+        "../node_modules/sequelize/types/lib/errors.d.ts",
+        "../node_modules/sequelize/types/lib/index-hints.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/operators.d.ts",
+        "../node_modules/sequelize/types/lib/query-interface.d.ts",
+        "../node_modules/sequelize/types/lib/query-types.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts",
+        "../node_modules/sequelize/types/lib/table-hints.d.ts",
+        "../node_modules/sequelize/types/lib/transaction.d.ts",
+        "../node_modules/sequelize/types/lib/utils.d.ts",
+        "../node_modules/sequelize/types/lib/utils/validator-extras.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/base.d.ts": [
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/belongs-to-many.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/belongs-to.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/has-many.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/has-one.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/associations/index.d.ts": [
+        "../node_modules/sequelize/types/lib/associations/base.d.ts",
+        "../node_modules/sequelize/types/lib/associations/belongs-to-many.d.ts",
+        "../node_modules/sequelize/types/lib/associations/belongs-to.d.ts",
+        "../node_modules/sequelize/types/lib/associations/has-many.d.ts",
+        "../node_modules/sequelize/types/lib/associations/has-one.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/hooks.d.ts": [
+        "../node_modules/sequelize/types/lib/instance-validator.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/instance-validator.d.ts": [
+        "../node_modules/sequelize/types/lib/model.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/model-manager.d.ts": [
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/model.d.ts": [
+        "../node_modules/sequelize/types/index.d.ts",
+        "../node_modules/sequelize/types/lib/associations/index.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/deferrable.d.ts",
+        "../node_modules/sequelize/types/lib/hooks.d.ts",
+        "../node_modules/sequelize/types/lib/instance-validator.d.ts",
+        "../node_modules/sequelize/types/lib/operators.d.ts",
+        "../node_modules/sequelize/types/lib/query-interface.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts",
+        "../node_modules/sequelize/types/lib/transaction.d.ts",
+        "../node_modules/sequelize/types/lib/utils.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/query-interface.d.ts": [
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/query-types.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts",
+        "../node_modules/sequelize/types/lib/transaction.d.ts",
+        "../node_modules/sequelize/types/lib/utils.d.ts",
+        "../node_modules/sequelize/types/type-helpers/set-required.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/sequelize.d.ts": [
+        "../node_modules/sequelize/types/lib/connection-manager.d.ts",
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/hooks.d.ts",
+        "../node_modules/sequelize/types/lib/instance-validator.d.ts",
+        "../node_modules/sequelize/types/lib/model-manager.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/query-interface.d.ts",
+        "../node_modules/sequelize/types/lib/query-types.d.ts",
+        "../node_modules/sequelize/types/lib/transaction.d.ts",
+        "../node_modules/sequelize/types/lib/utils.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/transaction.d.ts": [
+        "../node_modules/sequelize/types/lib/deferrable.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts",
+        "../node_modules/sequelize/types/lib/sequelize.d.ts"
+      ],
+      "../node_modules/sequelize/types/lib/utils.d.ts": [
+        "../node_modules/sequelize/types/lib/data-types.d.ts",
+        "../node_modules/sequelize/types/lib/model.d.ts"
       ],
       "../node_modules/typeorm/cache/queryresultcache.d.ts": [
         "../node_modules/typeorm/cache/queryresultcacheoptions.d.ts",
@@ -5235,6 +5675,10 @@
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/typeorm/index.d.ts"
       ],
+      "../src/commands/admin/addrolecommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
       "../src/commands/admin/giveawaycommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
@@ -5251,6 +5695,10 @@
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
+      "../src/commands/moderation/tempbancommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
       "../src/commands/moderation/warncommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
@@ -5259,7 +5707,15 @@
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
+      "../src/commands/public/djscommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
       "../src/commands/public/helpcommand.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/commands/public/levelcommand.ts": [
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
@@ -5267,8 +5723,20 @@
         "../node_modules/discord-akairo/src/index.d.ts",
         "../node_modules/discord.js/typings/index.d.ts"
       ],
-      "../src/database/database.ts": [
+      "../src/commands/public/userinfo.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/database/typeorm/typeorm.ts": [
         "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/listeners/client/message.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/listeners/client/messagedelete.ts": [
+        "../node_modules/discord-akairo/src/index.d.ts",
+        "../node_modules/discord.js/typings/index.d.ts"
       ],
       "../src/listeners/client/ready.ts": [
         "../node_modules/discord-akairo/src/index.d.ts"
@@ -5276,7 +5744,7 @@
       "../src/structures/giveaways/giveaways.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/database/models/giveaways.ts"
+        "../src/database/typeorm/models/giveaways.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -5324,6 +5792,8 @@
       "../../../appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.string.d.ts",
       "../../../appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.weakref.d.ts",
       "../node_modules/@discordjs/collection/dist/index.d.ts",
+      "../node_modules/@types/bson/index.d.ts",
+      "../node_modules/@types/mongodb/index.d.ts",
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/async_hooks.d.ts",
       "../node_modules/@types/node/base.d.ts",
@@ -5373,7 +5843,33 @@
       "../node_modules/@types/node/zlib.d.ts",
       "../node_modules/discord-akairo/src/index.d.ts",
       "../node_modules/discord.js/typings/index.d.ts",
+      "../node_modules/mongoose/index.d.ts",
       "../node_modules/reflect-metadata/index.d.ts",
+      "../node_modules/sequelize/types/index.d.ts",
+      "../node_modules/sequelize/types/lib/associations/base.d.ts",
+      "../node_modules/sequelize/types/lib/associations/belongs-to-many.d.ts",
+      "../node_modules/sequelize/types/lib/associations/belongs-to.d.ts",
+      "../node_modules/sequelize/types/lib/associations/has-many.d.ts",
+      "../node_modules/sequelize/types/lib/associations/has-one.d.ts",
+      "../node_modules/sequelize/types/lib/associations/index.d.ts",
+      "../node_modules/sequelize/types/lib/connection-manager.d.ts",
+      "../node_modules/sequelize/types/lib/data-types.d.ts",
+      "../node_modules/sequelize/types/lib/deferrable.d.ts",
+      "../node_modules/sequelize/types/lib/errors.d.ts",
+      "../node_modules/sequelize/types/lib/hooks.d.ts",
+      "../node_modules/sequelize/types/lib/index-hints.d.ts",
+      "../node_modules/sequelize/types/lib/instance-validator.d.ts",
+      "../node_modules/sequelize/types/lib/model-manager.d.ts",
+      "../node_modules/sequelize/types/lib/model.d.ts",
+      "../node_modules/sequelize/types/lib/operators.d.ts",
+      "../node_modules/sequelize/types/lib/query-interface.d.ts",
+      "../node_modules/sequelize/types/lib/query-types.d.ts",
+      "../node_modules/sequelize/types/lib/sequelize.d.ts",
+      "../node_modules/sequelize/types/lib/table-hints.d.ts",
+      "../node_modules/sequelize/types/lib/transaction.d.ts",
+      "../node_modules/sequelize/types/lib/utils.d.ts",
+      "../node_modules/sequelize/types/lib/utils/validator-extras.d.ts",
+      "../node_modules/sequelize/types/type-helpers/set-required.d.ts",
       "../node_modules/typeorm/cache/queryresultcache.d.ts",
       "../node_modules/typeorm/cache/queryresultcacheoptions.d.ts",
       "../node_modules/typeorm/common/deeppartial.d.ts",
@@ -5699,20 +6195,30 @@
       "../node_modules/typeorm/subscriber/event/updateevent.d.ts",
       "../src/bot.ts",
       "../src/client/botclient.ts",
+      "../src/commands/admin/addrolecommand.ts",
       "../src/commands/admin/giveawaycommand.ts",
       "../src/commands/moderation/bancommand.ts",
       "../src/commands/moderation/kickcommand.ts",
       "../src/commands/moderation/mutecommand.ts",
+      "../src/commands/moderation/tempbancommand.ts",
       "../src/commands/moderation/warncommand.ts",
       "../src/commands/public/avatarcommand.ts",
+      "../src/commands/public/djscommand.ts",
       "../src/commands/public/helpcommand.ts",
+      "../src/commands/public/levelcommand.ts",
       "../src/commands/public/pingcommand.ts",
+      "../src/commands/public/userinfo.ts",
       "../src/config.ts",
-      "../src/database/database.ts",
-      "../src/database/models/bans.ts",
-      "../src/database/models/giveaways.ts",
-      "../src/database/models/kicks.ts",
-      "../src/database/models/warns.ts",
+      "../src/database/mongodb/database.ts",
+      "../src/database/mongodb/models/giveaway.ts",
+      "../src/database/mongodb/models/warns.ts",
+      "../src/database/mysql/models/banconfig.ts",
+      "../src/database/mysql/models/warnconfig.ts",
+      "../src/database/mysql/sql.ts",
+      "../src/database/typeorm/models/giveaways.ts",
+      "../src/database/typeorm/typeorm.ts",
+      "../src/listeners/client/message.ts",
+      "../src/listeners/client/messagedelete.ts",
       "../src/listeners/client/ready.ts",
       "../src/structures/giveaways/giveaways.ts"
     ]

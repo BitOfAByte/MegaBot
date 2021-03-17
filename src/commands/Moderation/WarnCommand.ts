@@ -1,7 +1,6 @@
 import  { Command } from 'discord-akairo';
-import  { Message, MessageEmbed, GuildMember } from "discord.js";
-import { Repository} from "typeorm";
-import { Warns } from '../../database/Models/Warns';
+import {Message, GuildMember, MessageEmbed} from "discord.js";
+const warnConfig = require('../../database/MySQL/Models/WarnConfig');
 
 export default class WarnCommand extends Command {
     constructor() {
@@ -37,18 +36,31 @@ export default class WarnCommand extends Command {
         });
     }
     public async exec(message: Message, { member, reason}: { member: GuildMember, reason: string}): Promise<Message> {
-        const warnRepo: Repository<Warns> = this.client.db.getRepository(Warns);
-
-        if(member.roles.highest.position >= message.member.roles.highest.position && message.author.id != message.guild.ownerID)
+       if(member.roles.highest.position >= message.member.roles.highest.position && message.author.id != message.guild.ownerID)
             return message.channel.send(`${message.author.tag}. you're not allowed to warn ${member.user.tag}`);
 
-        await warnRepo.insert({
-            guild: message.guild.id,
-            user: member.id,
-            moderator: message.author.id,
-            reason: reason
-        });
+       const CaseId = await warnConfig.findOne({ where: { id: this.id }});
 
-        return message.channel.send(`${member.user.tag} has been warned by ${message.author.tag} for: *${reason}*`);
+       const embed = new MessageEmbed()
+           .setTitle(`Moderation: Warn [CaseID: ${CaseId}]**`)
+           .addField("Member ", member.user.tag, true)
+           .addField("Reason ", reason, true)
+           .addField("Moderator ", message.author.tag,  false)
+           .addField( "Moderator id ", message.author.id, false)
+           .setTimestamp()
+           .setFooter(`©️by ${message.guild.iconURL()}`)
+           .setColor("#ff0000")
+           .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: 'png' }));
+
+       await message.channel.send(embed);
+
+        await warnConfig.create({
+            user: member.user.tag,
+            userId: member.id,
+            reason: reason,
+            moderator: message.author.tag,
+            moderatorId: message.author.id,
+            active: true,
+        });
     }
 }

@@ -1,9 +1,15 @@
 import { Listener } from 'discord-akairo';
-import { TextChannel, Message } from "discord.js";
+import {Message, TextChannel} from 'discord.js';
+require('../../database/Mongodb/database');
 import { Repository } from "typeorm";
-import { Giveaways } from "../../database/Models/Giveaways";
+import { Giveaways } from "../../database/TypeOrm/Models/Giveaways";
 
 import giveawaysM from "../../structures/giveaways/giveaways";
+import { Manager } from 'erela.js';
+const manager = require('discord.js');
+const db = require('../../database/MySQL/sql');
+const BanConfig = require('../../database/MySQL/Models/BanConfig');
+const WarnConfig = require('../../database/MySQL/Models/WarnConfig');
 
 export default class ready extends Listener {
     public constructor(props) {
@@ -16,6 +22,8 @@ export default class ready extends Listener {
 
 
     public exec(): void {
+        console.log(`Logged in as ${this.client.user.tag}`);
+
         const giveawayRepo: Repository<Giveaways> = this.client.db.getRepository(Giveaways);
         console.log(`${this.client.user.tag} is now ready!`);
 
@@ -30,5 +38,17 @@ export default class ready extends Listener {
                 await giveawaysM.end(giveawayRepo, msg);
             })
         }, 3e5)
+
+
+        db.authenticate()
+            .then(() => {
+                console.log("Connected to MySQL database...");
+                BanConfig.init(db);
+                BanConfig.sync();
+                WarnConfig.init(db);
+                WarnConfig.sync();
+            });
+
+
     }
 }

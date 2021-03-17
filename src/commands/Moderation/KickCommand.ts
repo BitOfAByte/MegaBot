@@ -1,7 +1,5 @@
 import { Command } from 'discord-akairo';
 import { MessageEmbed, Message, GuildMember } from "discord.js";
-import { Repository } from 'typeorm';
-import  { Kicks } from "../../database/Models/Kicks";
 
 export default class KickCommand extends  Command {
     constructor(props) {
@@ -38,7 +36,7 @@ export default class KickCommand extends  Command {
     }
 
     public async exec(message: Message, { member, reason }: { member: GuildMember, reason: string }): Promise<Message> {
-        const kickRepo: Repository<Kicks> = this.client.db.getRepository(Kicks);
+
 
         if(member.roles.highest.position >= message.member.roles.highest.position && message.author.id != message.guild.ownerID)
             return message.channel.send(`${message.author.tag}. you're not allowed to kick ${member.user.tag}`);
@@ -58,13 +56,5 @@ export default class KickCommand extends  Command {
             .setFooter(member.user.displayAvatarURL({ dynamic: true}) + member.user.tag + " has been kicked")
             .setThumbnail(message.guild.iconURL({ dynamic: true }))
         );
-
-
-        await kickRepo.insert({
-            guild: message.guild.id,
-            user: member.id,
-            moderator: message.author.id,
-            reason: reason
-        });
     }
 }
